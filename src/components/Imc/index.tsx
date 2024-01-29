@@ -9,7 +9,7 @@ const Imc = ({ altura, massa }) => {
         if (altura && massa) {
             const alturaEmMetro = altura / 100;
             const valorImc = massa / (alturaEmMetro * alturaEmMetro);
-            setImc(valorImc.toFixed(1));
+            setImc(valorImc);
             atualizaFundoImc(valorImc);
         }
     }, [altura, massa]);
@@ -47,9 +47,9 @@ const Imc = ({ altura, massa }) => {
     };
 
     return (
-        <div className={`${styles.resultado} ${fundoImc.length > 0 ? stylesfundoImc : ''}`}>
+        <div className={`${styles.resultado} ${fundoImc.length > 0 ? styles[fundoImc] : ''}`}>
             <p className={styles.resultadoImc}>
-                <strong>Seu IMC:</strong> {imc}
+                <strong>Seu IMC:</strong> {imc.toFixed(1)}
             </p>
             <p className={styles.resultadoInterpretacao}>{interpretacaoImc()}</p>
         </div>
