@@ -1,6 +1,15 @@
 :root {
+    --corPrimaria: #2c2c54;
+    --corSecundaria: #40407a;
+    --corImc: #272727;
     --corFundo: #d1ccc0;
     --corFundoApp: #ccae62;
+    --corImc1: #cd6133;
+    --corImc2: #218c74;
+    --corImc3: #cc8e35;
+    --corImc4: #cd6133;
+    --corImc5: #ff5252;
+    --corImc6: #b33939;
 }
 
 * {
@@ -8,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: var(--corPrimaria);
 }
 
 body {
@@ -31,4 +41,23 @@ body {
     background-color: var(--corFundoApp);
     border-radius: 8px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 1023px) {
+    .body-app {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: block;
+    }
+
+    .body-app {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+    }
 }

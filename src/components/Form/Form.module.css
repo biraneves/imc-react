@@ -1,0 +1,37 @@
+.form {
+    width: 80%;
+    margin: 36px auto 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.formFieldLabel {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.formFieldInput {
+    min-width: 140px;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    outline: none;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--corFundo);
+    color: var(--corSecundaria);
+}
+
+@media screen and (max-width: 767px) {
+    .formFieldInput {
+        font-size: 20px;
+    }
+}
