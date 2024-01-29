@@ -47,11 +47,11 @@ const Imc = ({ altura, massa }) => {
     };
 
     return (
-        <div className={`${styles.resultado} ${fundoImc.length > 0 ? styles[fundoImc] : ''}`}>
+        <div className={`${styles.resultado} ${fundoImc.length > 0 ? stylesfundoImc : ''}`}>
             <p className={styles.resultadoImc}>
                 <strong>Seu IMC:</strong> {imc}
             </p>
-            <p className={styles.resultadoInterpretacao}>{interpretacaoImc(imc)}</p>
+            <p className={styles.resultadoInterpretacao}>{interpretacaoImc()}</p>
         </div>
     );
 };
